@@ -13,6 +13,10 @@ class TodolistsController < ApplicationController
     redirect_to '/top'
   end
 
+  def index
+    @lists = List.all
+  end
+
   private
   # ストロングパラメータ（セキリュティ対策/これより後に定義されたメソッドはアクションとして認識されない）
   def list_params
