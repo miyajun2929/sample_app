@@ -10,6 +10,7 @@ class TodolistsController < ApplicationController
     # 2. データをデータベースに保存するためのsaveメソッド実行
     list.save
     # 詳細画面へリダイレクト
+    # 引数の(list.id)を忘れないこと
     redirect_to todolist_path(list.id)
     # 3. トップ画面へリダイレクト
     # redirect_to '/top'（新規投稿後のリダイレクト先変更のため削除）
