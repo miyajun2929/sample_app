@@ -8,4 +8,5 @@ get 'todolists' => 'todolists#index'
 get 'todolists/:id' => 'todolists#show', as: 'todolist'
 get 'todolists/:id/edit' => 'todolists#edit', as: 'edit_todolist'
 # ルーティングのURLに:idを用いることで、todolists/○○/editのすべてのURLが対象になる
+patch 'todolists/:id' => 'todolists#update', as: 'update_todolist'
 end
