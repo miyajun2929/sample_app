@@ -15,14 +15,15 @@ class TodolistsController < ApplicationController
     # 3. トップ画面へリダイレクト
     # redirect_to '/top'（新規投稿後のリダイレクト先変更のため削除）
   end
-
   def index
     @lists = List.all
   end
-
   def show
     @list = List.find(params[:id])
     # データをfindメソッドを使ってデータベースから取得し、@listへ格納
+  end
+  def edit
+    @list = List.find(params[:id])
   end
 
   private
