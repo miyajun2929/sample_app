@@ -17,6 +17,11 @@ class TodolistsController < ApplicationController
     @lists = List.all
   end
 
+  def show
+    @list = List.find(params[:id])
+    # データをfindメソッドを使ってデータベースから取得し、@listへ格納
+  end
+
   private
   # ストロングパラメータ（セキリュティ対策/これより後に定義されたメソッドはアクションとして認識されない）
   def list_params
