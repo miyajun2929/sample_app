@@ -2,7 +2,7 @@
 <% @lists.each do |list| %>
   <p>タイトル</p>
   <span>
-    <%= link_to list.title, todolist_path(list.id)%>
+    <%= link_to list.title, todolist_path(list.id) %>
     <!-- 変更点："/todolists/#{list.id}"-->
     <!-- 変数展開を用いて、投稿のidを指定-->
   </span>
