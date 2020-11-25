@@ -1,6 +1,8 @@
 <h1>新規投稿</h1>
 <!-- form_with部分 -->
-<%= form_with model : @list, url:'/todolists', local:true do |f| %>
+<%= form_with model: @list, url:'/todolists', local:true do |f| %>
+<!-- local:trueの指定がない場合は、JavaScriptの非同期通信（Ajax）が行われる-->
+<!-- local:trueの指定があれば、通常のフォーム送信が行われる-->
   <h4>タイトル</h4>
   <%= f.text_field :title %>
   <h4>本文</h4>
