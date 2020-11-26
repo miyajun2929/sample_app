@@ -30,6 +30,8 @@ class TodolistsController < ApplicationController
     list.update(list_params)
     redirect_to todolist_path(list.id)
   end
+  def destroy
+  end
 
   private
   # ストロングパラメータ（セキリュティ対策/これより後に定義されたメソッドはアクションとして認識されない）
