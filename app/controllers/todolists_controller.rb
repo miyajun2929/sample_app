@@ -16,7 +16,7 @@ class TodolistsController < ApplicationController
     # redirect_to '/top'（新規投稿後のリダイレクト先変更のため削除）
   end
   def index
-    @lists = List.all
+    @lists = List.all  #インスタンス変数を定義することで、すべての投稿データを取得するようListモデルへ指示
   end
   def show
     @list = List.find(params[:id])
