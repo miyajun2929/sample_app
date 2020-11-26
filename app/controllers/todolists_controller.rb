@@ -5,7 +5,7 @@ class TodolistsController < ApplicationController
   end
 
   def create
-    # 1. データを新規登録するためのインスタンス作成
+    # 1. データを新規登録するためのインスタンス作成（データベース保存用のインスタンス変数が設定される）
     list = List.new(list_params)
     # 2. データをデータベースに保存するためのsaveメソッド実行
     list.save
