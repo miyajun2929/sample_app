@@ -6,4 +6,6 @@
     <!-- 変更点："/todolists/#{list.id}"-->
     <!-- 変数展開を用いて、投稿のidを指定-->
   </span>
+  <p>画像</p>
+  <%= attachmetn_image_tag list, :image, :fill, 100, 100, format: 'jpeg' %>
 <% end %>
