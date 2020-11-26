@@ -34,7 +34,7 @@ class TodolistsController < ApplicationController
   private
   # ストロングパラメータ（セキリュティ対策/これより後に定義されたメソッドはアクションとして認識されない）
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)
   end
 
 end
